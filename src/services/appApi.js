@@ -1,4 +1,3 @@
-
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 
 //define a service user a base url
@@ -7,7 +6,7 @@ const appApi = createApi({
 //creating user
     reducerPath: 'appApi',
     baseQuery: fetchBaseQuery({
-       baseUrl : 'https://my-chatfriends-app.herokuapp.com/'||'http://localhost:5001'
+       baseUrl : "https://my-chatfriends-app.herokuapp.com" || 'http://localhost:5001'
     }),
 
     endpoints : (builder) => ({
