@@ -5,6 +5,10 @@ import { AppContext } from '../context/appContext';
 import {addNotifications, resetNotifications} from '../features/userSlice';
 import './Sidebar.css';
 
+
+
+// 'getRooms', 'setCurrentRoom', 'socket', and 'user'.
+
 const Sidebar = () => {
     const {socket, setMembers, members, setCurrentRoom, setRooms, privateMemberMsg, rooms, setPrivateMemberMsg, currentRoom} = useContext(AppContext);
     const user = useSelector(state => state.user);
