@@ -46,7 +46,6 @@ const MessageForm = () => {
 
         socket.emit('message-room', roomId, message, time, todayDate, user)
         setMessage('');
-      
     }
 
     // const todayDate = getFormattedDate();
@@ -65,10 +64,10 @@ const MessageForm = () => {
                 </>
             )}
             {!user && <div className='alert alert-danger'>Please login</div>}
-            {user && messages.map(({_id: date, messagesByDate}, idx) => (
+            {user && messages.map(({_id: date, messageByDate}, idx) => (
                 <div key={idx}>
                     <p className='alert alert-info text-center message-date-indicator'>{date}</p>
-                    {messagesByDate?.map(({content, time, from: sender}, msgIdx) => (
+                    {messageByDate?.map(({content, time, from: sender}, msgIdx) => (
                         <div key={msgIdx} className={sender?.email === user?.email ? "message" : "incoming-message"}>
                             <div className='message-inner'>
                                 <div className='d-flex align-items-center mb-3'>

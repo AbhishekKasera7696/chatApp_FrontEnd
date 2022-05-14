@@ -36,7 +36,7 @@ const Signup = () => {
         data.append('upload_preset', 'r2hj77ds');
         try {
             setUploadingImg(true);
-            let res = await fetch('https://api.cloudinary.com/v1_1/dvzh5krde/image/upload', {
+            let res = await fetch(`https://api.cloudinary.com/v1_1/dvzh5krde/image/upload`, {
                 method: "post",
                 body: data
             })
