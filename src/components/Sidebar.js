@@ -44,7 +44,7 @@ const Sidebar = () => {
     })
 
     function getRooms() {
-      fetch('http://localhost:3000/rooms').then((res) => res.json()).then((data) => setRooms(data))
+      fetch('http://localhost:5001/rooms' || 'https://full-stack-appchat.herokuapp.com/rooms').then((res) => res.json()).then((data) => setRooms(data))
     }
 
     function orderIds(id1, id2) {
