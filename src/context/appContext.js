@@ -1,7 +1,7 @@
 import {io} from 'socket.io-client';
 import React from 'react';
 
-const SOCKET_URL ='http://localhost:5001' || ' https://full-stack-appchat.herokuapp.com' ;
+const SOCKET_URL ='http://localhost:5001' || 'https://full-stack-appchat.herokuapp.com' ;
 export const socket = io(SOCKET_URL);
 
 //app context
